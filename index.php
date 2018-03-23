@@ -1,6 +1,6 @@
 <? session_start();
    require_once("classes/troomguest.inc.php"); 
-    
+       
 ?>
 <!DOCTYPE html>
 <html lang="en">
