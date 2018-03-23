@@ -1,0 +1,462 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="icon" href="img/favicon.png">
+<link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-ipad-retina.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-iphone-retina.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-ipad.png" />
+<link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-iphone.png" />
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/styles.min.css">
+<link rel="stylesheet" href="css/responsive.min.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href="css/font.min.css">
+<link rel="canonical" href="https://www.tuitionroom.com" />
+<style type="text/css">
+@media print body {
+margin-top: 2cm;
+margin-right: 2cm;
+margin-bottom: 1.5cm;
+margin-left: 2cm
+}
+/* Preloader */
+.preloader {
+	position: fixed;
+	z-index: 99999;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+}
+.preloader img {
+	position: absolute;
+	top: calc(40% - 32px);
+	left: calc(50% - 32px);
+}
+.pr15 {
+	padding-right: 15px
+}
+.pt10 {
+	padding-top: 10px;
+}
+.pt15 {
+	padding-top: 15px;
+}
+#regform input[type=checkbox], #regform input[type=radio] {
+	display: none
+}
+.fa-graduation-cap:before {
+	content: "\f19d";
+}
+.newhader .navbar-nav>.open>a, .newhader .navbar-nav>.open>a:focus, .newhader .navbar-nav>.open>a:hover {
+	background-color: #8c8b8b;
+}
+.newhader .dropdown-menu>li>a {
+	height: 50px;
+	line-height: 50px;
+}
+.dropdown-submenu {
+	position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+	top: 0;
+	left: 100%;
+	margin-top: -6px;
+	margin-left: -1px;
+	-webkit-border-radius: 0 0px 0px 0px;
+	-moz-border-radius: 0 0px 0px;
+	border-radius: 0 0px 0px 0px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+	display: block;
+}
+.dropdown-submenu>a:after {
+	display: block;
+	content: " ";
+	float: right;
+	width: 0;
+	height: 0;
+	border-color: transparent;
+	border-style: solid;
+	border-width: 5px 0 5px 5px;
+	border-left-color: #ccc;
+	margin-top: 20px;
+	margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+	border-left-color: #fff;
+}
+.dropdown-submenu.pull-left {
+	float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+	left: -100%;
+	margin-left: 10px;
+	-webkit-border-radius: 0 0px 0px 0px;
+	-moz-border-radius: 0 0px 0px;
+	border-radius: 0 0px 0px 0px;
+}
+.ddml {
+	padding: 0px;
+	-webkit-border-radius: 0 0px 0px 0px;
+	-moz-border-radius: 0 0px 0px;
+	border-radius: 0 0px 0px 0px;
+}
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+	background-color: #8c8b8b;
+	color: white;
+}
+.newhader .dropdown-menu {
+	min-width: 100%
+}
+.terms a, .terms a:active, .terms a:hover, .terms a:focus {
+	color: #2B2B2B;
+}
+.liw200 {
+	width: 200px;
+	text-align: right;
+}
+</style>
+<header role="banner" class="navbar navbar-fixed-top navbar-inverse myinverse newhader">
+  <!--<div class="preloader"> <img src="img/loading-tedy.gif" alt="Preloader image" width="62" height="104"> </div>-->
+  <div class="container">
+    <div class="navbar-header text-center">
+      <button  style="margin:10px 2px;" data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".side-collapse-container" type="button" class="navbar-toggle pull-left"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a href="https://www.tuitionroom.com"><img src="img/logo.png" alt="tuitionroom.com"></a>
+      <div class="button visible-xs pull-right pr15">
+        <button class="navbar-btn nav-button lgn"  data-toggle="modal" data-target="#singlelogin"> <span class="visible-vs"><i class="fa fa-sign-in"></i></span> <span class="hidden-vs">LOGIN/SIGN UP</span> </button>
+        &nbsp; </div>
+    </div>
+    <div class="navbar-inverse side-collapse in">
+      <nav class="navbar-right hidden-xs">
+        <button class="navbar-btn nav-button lgn"  data-toggle="modal" data-target="#singlelogin">LOGIN / SIGN UP</button>
+      </nav>
+      <nav role="navigation" class="navbar-collapse navbar-right">
+        <ul class="nav navbar-nav">
+          <li class="show-on-hover liw200"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">TUITIONS <b class="caret"></b></a>
+            <ul class="dropdown-menu multi-level ddml">
+              <li class="dropdown-submenu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">SCHOOL TUITIONS</a>
+                <ul class="dropdown-menu ddml">
+                  <li><a href="search-new.php?board=cbse"> CBSE</a></li>
+                  <li><a href="search-new.php?board=ICSE"> ICSE </a></li>
+                  <li><a href="search-new.php?board=IGCSE"> IGCSE </a></li>
+                </ul>
+              </li>
+              <li class="dropdown-submenu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">PREPARATION COURSES</a>
+                <ul class="dropdown-menu ddml">
+                  <li><a href="IIT-Teachers"> IIT-JEE PREPARATION </a></li>
+                  <li><a href="IIT-Teachers"> NEET </a></li>
+                  <li><a href="foundation"> FOUNDATION COURSE </a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="aboutus.html"> ABOUT TUITIONROOM</a> </li>
+          <li><a href="becometutor.php"> BECOME A TUTOR</a> </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<style>
+.button--loading {
+	position: relative;
+	cursor: wait;
+	outline: none;
+}
+.button--loading:before {
+	margin: -13px 0 0 -13px;
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	content: '';
+	-webkit-border-radius: 24px;
+	-webkit-background-clip: padding-box;
+	-moz-border-radius: 24px;
+	-moz-background-clip: padding;
+	border-radius: 24px;
+	background-clip: padding-box;
+	border: rgba(255, 255, 255, 0.25) 2px solid;
+	border-top-color: #fff;
+	-webkit-animation: animation-rotate 750ms linear infinite;
+	-moz-animation: animation-rotate 750ms linear infinite;
+	-o-animation: animation-rotate 750ms linear infinite;
+	animation: animation-rotate 750ms linear infinite;
+}
+.button--loading span, .button--loading:hover span, .button--loading:active span {
+	color: transparent;
+	text-shadow: none;
+}
+@-webkit-keyframes animation-rotate {
+ 100% {
+ -webkit-transform: rotate(360deg);
+}
+}
+@-moz-keyframes animation-rotate {
+ 100% {
+ -moz-transform: rotate(360deg);
+}
+}
+@-o-keyframes animation-rotate {
+ 100% {
+ -o-transform: rotate(360deg);
+}
+}
+@keyframes animation-rotate {
+ 100% {
+ transform: rotate(360deg);
+}
+}
+</style>
+<style type="text/css">
+.rnewuser {
+	display: none;
+	text-align: center;
+	font-size: 13px;
+	color: grey;
+	cursor: pointer;
+}
+.modal {
+	-webkit-transition: all 0.75s ease;
+	transition: all 0.75s ease;
+}
+#singlelogin .modal-header {
+	padding-bottom: 5px;
+}
+#singlelogin .modal-title {
+	font-size: 16px;
+	text-align: center;
+}
+#singlelogin .modal-body {
+	padding-top: 10px;
+}
+#singlelogin .modal-footer {
+	text-align: center;
+	padding: 5px;
+}
+#singlelogin .modal-footer p {
+	margin-bottom: 0px;
+	color: #afafaf;
+}
+#singlelogin .modal-content {
+	border-radius: 1px;
+}
+#singlelogin input {
+	width: 100%;
+	padding: 5px;
+	outline: none;
+	border: 1px solid #c3c2c2;
+}
+#singlelogin button.close {
+	border: none;
+	background-color: transparent;
+	font-size: 32px;
+	font-weight: 100;
+	color: #d2cbcb;
+	margin: 0px;
+}
+#singlelogin button.close:hover, #singlelogin button.close:active, #singlelogin button.close:focus {
+	box-shadow: none;
+	border-radius: 0px;
+}
+.logintex {
+	font-size: 10px;
+	padding-top: 10px;
+}
+.ltext {
+	font-size: 12px;
+	text-align: center;
+	line-height: 15px;
+	padding-bottom: 10px;
+}
+.sbtn {
+	padding: 0px 5px;
+}
+.vertical-alignment-helper {
+	display: table;
+	height: 100%;
+	width: 100%;
+	pointer-events: none; /* This makes sure that we can still click outside of the modal to close it */
+}
+.vertical-align-center {
+	/* To center vertically */
+	display: table-cell;
+	vertical-align: middle;
+	pointer-events: none;
+}
+.modal-content {
+	/* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+	width: inherit;
+	height: inherit;
+	/* To center horizontally */
+	margin: 0 auto;
+	pointer-events: all;
+}
+</style>
+<div id="singlelogin" class="modal fade" role="dialog">
+  <div class="vertical-alignment-helper">
+    <div class="modal-dialog vertical-align-center modal-sm"> 
+      
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">WELCOME TO TUITIONROOM</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-12">
+              <p id="errfbemailid" class="hide pt10">You registered at Tuitionroom.com <br>
+                via Facebook.<br>
+                <a href="fblogin.php" class="btn btn-md btn-primary btn-block h40 lh25 f13"> <i class="fa fa-facebook"></i> <span> Login with Facebook</span></a></p>
+              <p id="errgmailemailid" class="hide pt10">You registered at Tuitionroom.com <br>
+                via GMail.<br>
+                <a href="googlelogin.php" class="btn btn-md  btn-danger btn-block h40 lh25 f13"> <i class="fa fa-google-plus"></i> <span> Login with GMail </span></a></p>
+              <p class="rnewuser">OR Register as new user</p>
+            </div>
+          </div>
+          <div class="row" id="loginstep1">
+            <div class="col-md-12">
+              <p class="ltext">Please Login with</p>
+              <div class="col-md-6 sbtn"> <a href="googlelogin.php" class="btn btn-md  btn-danger btn-block h40 lh25 f13"> <i class="fa fa-google-plus"></i> <span> GMail </span></a> </div>
+              <div class="col-md-6 sbtn"> <a href="fblogin.php"  class="btn btn-md btn-primary btn-block h40 lh25 f13"> <i class="fa fa-facebook"></i> <span> Facebook</span></a> </div>
+            </div>
+            <div class="col-md-12 text-center">
+              <p class="logintex">or Login with Email ID</p>
+            </div>
+            <form action="signup.php" method="POST" id="reguser" name="reguser" autocomplete="off">
+              <div class="col-md-12">
+                <input type="text" placeholder="Email" id="sloginemailid" name="emailid" maxlength="50">
+              </div>
+              <div class="col-md-12 pt10">
+                <button type="submit" class="btn btn-warning btn-block h40" id="button1"><span>CONTINUE</span></button>
+              </div>
+            </form>
+          </div>
+          <style type="text/css">
+        .imgcheck{
+            position:relative;
+            display: inline-block;
+            text-align:center;
+        }
+        .imgcheck input[type="radio"]{
+            display:none;
+        }
+        .imgcheck input[type="radio"] + label{
+            cursor:pointer;
+        }
+        .imgcheck input[type="radio"] + label img { height:130px;}
+        
+        .imgcheck input[type="radio"]:checked + label{
+            background:#c8ddf3;
+        }
+        .imgcheck input[type="radio"]:checked + label:before{
+            position:absolute;
+            content:'';
+            top:0;
+            right: 10px;
+            width: 25%;
+            height: 25%;
+            background:url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIgogICB4bWxuczppbmtzY2FwZT0iaHR0cDovL3d3dy5pbmtzY2FwZS5vcmcvbmFtZXNwYWNlcy9pbmtzY2FwZSIKICAgd2lkdGg9IjI4Mi44NCIKICAgaGVpZ2h0PSIyODIuODQiCiAgIGlkPSJzdmcyIgogICB2ZXJzaW9uPSIxLjEiCiAgIGlua3NjYXBlOnZlcnNpb249IjAuNDguNCByOTkzOSIKICAgc29kaXBvZGk6ZG9jbmFtZT0iY2hlY2suc3ZnIj4KICA8ZGVmcwogICAgIGlkPSJkZWZzNCIgLz4KICA8c29kaXBvZGk6bmFtZWR2aWV3CiAgICAgaWQ9ImJhc2UiCiAgICAgcGFnZWNvbG9yPSIjZmZmZmZmIgogICAgIGJvcmRlcmNvbG9yPSIjNjY2NjY2IgogICAgIGJvcmRlcm9wYWNpdHk9IjEuMCIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6em9vbT0iMS45Nzk4OTkiCiAgICAgaW5rc2NhcGU6Y3g9IjM2LjUwNjcwNyIKICAgICBpbmtzY2FwZTpjeT0iMTQ3LjgzNTA3IgogICAgIGlua3NjYXBlOmRvY3VtZW50LXVuaXRzPSJweCIKICAgICBpbmtzY2FwZTpjdXJyZW50LWxheWVyPSJsYXllcjEiCiAgICAgc2hvd2dyaWQ9ImZhbHNlIgogICAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMTM2MCIKICAgICBpbmtzY2FwZTp3aW5kb3ctaGVpZ2h0PSI3NDQiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjI0IgogICAgIGlua3NjYXBlOndpbmRvdy1tYXhpbWl6ZWQ9IjEiIC8+CiAgPG1ldGFkYXRhCiAgICAgaWQ9Im1ldGFkYXRhNyI+CiAgICA8cmRmOlJERj4KICAgICAgPGNjOldvcmsKICAgICAgICAgcmRmOmFib3V0PSIiPgogICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PgogICAgICAgIDxkYzp0eXBlCiAgICAgICAgICAgcmRmOnJlc291cmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIgLz4KICAgICAgICA8ZGM6dGl0bGUgLz4KICAgICAgPC9jYzpXb3JrPgogICAgPC9yZGY6UkRGPgogIDwvbWV0YWRhdGE+CiAgPGcKICAgICBpbmtzY2FwZTpsYWJlbD0iTGF5ZXIgMSIKICAgICBpbmtzY2FwZTpncm91cG1vZGU9ImxheWVyIgogICAgIGlkPSJsYXllcjEiCiAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCwtNzY5LjUyMjE4KSI+CiAgICA8cGF0aAogICAgICAgc3R5bGU9ImZpbGw6IzEzYjdkYjtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZSIKICAgICAgIGQ9Im0gMTQxLjQwNDM2LDc2OS41MjAzIGMgLTc4LjEwODgyNiwwIC0xNDEuNDA2MjM1Nyw2My4yOTc0MSAtMTQxLjQwNjIzNTcsMTQxLjQwNjI1IDAsNzguMTA4ODQgNjMuMjk3NDA5NywxNDEuNDM3NTUgMTQxLjQwNjIzNTcsMTQxLjQzNzU1IDc4LjEwODg0LDAgMTQxLjQzNzUxLC02My4zMjg3MSAxNDEuNDM3NTEsLTE0MS40Mzc1NSAwLC03OC4xMDg4NCAtNjMuMzI4NjcsLTE0MS40MDYyNSAtMTQxLjQzNzUxLC0xNDEuNDA2MjUgeiIKICAgICAgIGlkPSJwYXRoMjk4NSIKICAgICAgIGlua3NjYXBlOmNvbm5lY3Rvci1jdXJ2YXR1cmU9IjAiCiAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9InNzc3NzIiAvPgogICAgPHBhdGgKICAgICAgIHN0eWxlPSJmaWxsOiNmZmZmZmY7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOiNmZmZmZmY7c3Ryb2tlLXdpZHRoOjAuNzE0Mjg1NzI5OTk5OTk5OTU7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZS1taXRlcmxpbWl0OjQ7c3Ryb2tlLW9wYWNpdHk6MTtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLWRhc2hvZmZzZXQ6MCIKICAgICAgIGQ9Im0gOTkuNzQ5NzM2LDE4NS45NTgyNyAtMzcuNjgwMTU3LC0zNy42ODUyIDguODkyNTU3LC04Ljg3MTIgOC44OTI1NTcsLTguODcxMjEgMTkuMDQ5MzExLDE4LjUyMDY4IGMgMjQuOTYxMTE2LDI0LjI2ODQzIDMyLjQzOTY1NiwzMS4yNzg2MyAzMi44ODg5ODYsMzAuODI5MzEgMC4yMDMzNCwtMC4yMDMzNCAxNC4zNTM2NSwtMjUuMzk1MjUgMzEuNDQ1MTQsLTU1Ljk4MjAyIDE3LjA5MTQ5LC0zMC41ODY3NzkgMzEuMzIyNTUsLTU1Ljg2NDI3IDMxLjYyNDU4LC01Ni4xNzIyMDcgMC42NTI4NCwtMC42NjU2MDEgMjAuOTY0NTIsMTUuNzQ0NDEyIDIwLjY0NzY1LDE2LjY4MTQ0NiAtMC40ODY5OSwxLjQ0MDEzNyAtNzcuMzg4MDMsMTM5LjE3NzA3MSAtNzcuNzIwOCwxMzkuMjA1MTkxIC0wLjE5NzgxLDAuMDE2NyAtMTcuMzE1NzQsLTE2LjkyNzk0IC0zOC4wMzk4MjQsLTM3LjY1NDc5IHoiCiAgICAgICBpZD0icGF0aDI5ODMiCiAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCw3NjkuNTIyMTgpIiAvPgogIDwvZz4KPC9zdmc+");
+            background-repeat:no-repeat;
+            background-size: 100% 100%;
+            opacity:0.8;
+        }
+        </style>
+          <style type="text/css">
+        #buttonreg, #loginstep2, #usertype { display:none;}
+		#errfbemailid,#errgmailemailid{font-size:12px; line-height:15px; text-align:center;}
+		#errfbemailid a,#errgmailemailid a{ margin-top:15px;}
+        </style>
+          <form action="signup.php" method="POST" id="newreguser" name="newreguser" autocomplete="off">
+            <div class="row" id="loginstep2">
+              <div class="col-md-12" id="usertype">
+                <div class="cl"><span>Tell us Who Your Are</span></div>
+                <div id="errusertype" class="hide">Select User Type</div>
+                <div class="imgcheck col-md-6">
+                  <input type='radio' id='usertype1' name='usertype' value='Student'>
+                  <label for='usertype1'><img src="img/student.png" alt="student" id="student_user" /></label>
+                </div>
+                <div class="imgcheck col-md-6">
+                  <input type='radio' id='usertype2' name='usertype' value='Teacher'>
+                  <label for='usertype2'><img src="img/teacherimg.png" alt="teacher" id="teacher_user" /></label>
+                </div>
+              </div>
+              <div class="col-md-12 pt10">
+                <input type="text"  value="" readonly id="newuser">
+                <i class="fa fa-pencil editicon"></i> </div>
+              <div class="col-md-12 pt10">
+                <input type="tel" name="newumobile" id="newumobile" placeholder="Enter Mobile Number" maxlength="10" autofocus>
+              </div>
+              <div class="col-md-12 pt10">
+                <input type="password" name="newupasswd" id="newupasswd" placeholder="Create Password" maxlength="25">
+              </div>
+              <div class="col-md-12 pt10">
+                <button type="submit" name="snew" value="submit" class="btn btn-info btn-block h40" id="buttonreg"><span>REGISTER</span></button>
+              </div>
+            </div>
+            <input type="hidden" name="submit_register_new" value="submit"/>
+            <input type="hidden" placeholder="Email" id="newuemailid" name="newuemailid" maxlength="50">
+          </form>
+          <style type="text/css">
+	   #loginstep3, #buttonlogin,#fgtpwd, .emailtext { display:none;}
+	   #fgtpwd {color:gray; cursor:pointer; text-align:center; font-size:13px; margin-bottom:0px;}
+	   .emailtext {}
+	   .editicon {
+    position: absolute;
+    right: 0;
+    margin-top: -26px;
+    margin-right: 25px;
+    color: #bababa;
+    cursor: pointer;
+    z-index: 9999;
+    font-size: 16px;
+		   }
+	.fa-pencil:before {
+  content: "\f040";
+}
+.fa-eye-slash:before {
+  content: "\f070";
+}
+.fa-eye:before {
+  content: "\f06e";
+}
+.f10 {font-size: 10px;}
+#errlogin, #fgtpwdmsg { color: #FF5722;font-size: 12px;}
+	   </style>
+          <div class="row" id="loginstep3">
+            <form  method="POST" id="loginuser" name="loginuser" autocomplete="off">
+              <div class="col-md-12 pt10 text-center"> <span id="errlogin" class="hide">Wrong Password. Try Again!</span> <span id="fgtpwdmsg" class="hide"></span> </div>
+              <div class="col-md-12 pt10">
+                <input type="text" class="emailtext" value="" readonly id="existinguser">
+                <i class="fa fa-pencil editicon"></i> </div>
+              <div class="col-md-12 pt10" id="showpassword">
+                <input type="password" placeholder="Enter Password" class="password" name="passwd" id="sloginpasswd" autofocus>
+                <i class="fa fa-eye-slash editicon"></i> </div>
+              <div class="col-md-12 pt10">
+                <button type="submit" class="btn btn-success btn-block h40" id="buttonlogin"><span>LOGIN</span></button>
+              </div>
+              <div class="col-md-12 text-center pt10">
+                <p id="fgtpwd">Forgot Password?</p>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <style>
+          .checkboxy { 
+    font-size:10px;
+    display: none;
+    clear: both;
+		  }
+		  #checky { width:auto !important; position:relative; top:3px; margin-right:2px;}
+          </style>
+          <div class="checkboxy" id="checkboxy">
+            <input name="cecky" id="checky" value="1" type="checkbox" checked />
+            <label class="terms">I accept the <a style="color:gray; text-decoration:none;" href="https://www.tuitionroom.com/termsnconditions.html" target="_blank">Terms &amp; Conditions</a></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

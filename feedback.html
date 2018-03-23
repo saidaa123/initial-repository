@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<title>Tution Room-Feeback</title>
+</head>
+<script type="text/javascript">function callAjax(e,a){var o;o=new XMLHttpRequest,o.onreadystatechange=function(){4==o.readyState&&200==o.status&&a(o.responseText)},o.open("GET",e,!1),o.send()}function loadHeader(e){header=e}function loadFooter(e){footer=e}var header,footer,relprods;callAjax("header_ajax.html",loadHeader),callAjax("footer_ajax.html",loadFooter);</script>
+<script type="text/javascript">document.writeln(header);</script>
+<div id="feedback">
+<div class="container">
+  <div class="row">
+          <div class="col-md-offset-3 col-md-6 col-xs-12 border">
+          <h3>Feedback</h3>
+            <img src="img/bx_loader.gif" id="preloader" class="hidden"/>
+            <div id="success" class="alert alert-success hidden">Thank You. We will contact you.</div>
+            <form class="omb_loginForm" name="commentform" id="commentform" method="post" autocomplete="off">
+              <div class="input-group wow rollIn" data-wow-duration="1s"> <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <input type="text" class="form-control" id="fbkuname" name="fbkuname" placeholder="Full Name">
+              </div>
+              <span class="help-block" id="errfbkuname"></span>
+              <div class="input-group wow rollIn" data-wow-duration="1.25s"> <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                <input type="text" class="form-control" id="fbkemailid" name="fbkemailid" placeholder="Email address">
+              </div>
+              <span class="help-block" id="errfbkemailid"></span>
+              <div class="input-group wow rollIn" data-wow-duration="1.5s"> <span class="input-group-addon"><i class="fa fa-mobile fa-lg"></i></span>
+                <input  type="mobile" class="form-control" name="fbkmobile" id="fbkmobile" onKeyPress="return isNumberKey(event)" placeholder="Mobile Number" maxlength="10">
+              </div>
+              <span class="help-block" id="errfbkmobile"></span>
+              <div class="input-group wow rollIn" data-wow-duration="1.5s"> <span class="input-group-addon"><i class="fa fa-keyboard-o"></i></span>
+                <textarea class="form-control" tabindex="4" rows="4" cols="80" id="fbkquery" name="fbkquery" placeholder="Your Query goes here ..."></textarea>
+              </div>
+              <span class="help-block" id="errfbkquery"></span>
+              <div class="col-sm-12 text-center">
+                <button class="btn btn-sm btn-primary text-center" type="submit">SUBMIT</button>
+              </div>
+            </form>
+            </div>
+  </div>
+</div></div>
+<script type="text/javascript">document.writeln(footer);</script>
+<script type="text/javascript">
+$(function(){
+	$("#commentform").bind("submit",function(){validateFBackForm();return false;});
+	});
+	
+ var fbregexp = new RegExp(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/);
+ var fbvalid;
+
+ function validateFBackForm()
+ { 
+  
+   fbvalid=true;
+   if($("#fbkuname").val()==''){
+    	fbvaild=false;
+		$("#errfbkuname").html("Enter Your Name").show();
+	}else
+		$("#errfbkuname").html("").hide();
+	 
+   
+  	if($("#fbkemailid").val()=='' || !fbregexp.test($("#fbkemailid").val())){
+		fbvalid=false;
+		$("#errfbkemailid").html("Enter Valid Email ID").show();
+	}else
+	 	$("#errfbkemailid").html("").hide();
+		
+   if($("#fbkmobile").val()=='' || $("#fbkmobile").val().length!=10){
+    	fbvaild=false;
+		$("#errfbkmobile").html("Enter Valid Contact Number").show();
+	}else
+		$("#errfbkmobile").html("").hide();
+   
+     
+   if($("#fbkquery").val()==''){
+		fbvalid=false;
+		$("#errfbkquery").html("Enter Your Message").show();
+   }else
+	   	$("#errfbkquery").html("").hide();
+ 
+   	  
+	if(fbvalid)	
+	{  
+	  $("#preloader").removeClass("hidden").show("slow");
+	  $.post("addfeedback.php",{"fbkuname":$("#fbkuname").val(),"fbkemailid":$("#fbkemailid").val(),"fbkmobile":$("#fbkmobile").val(),"fbkquery":$("#fbkquery").val()},
+																								   function(resp)
+																								   {   
+									$("#preloader").addClass("hidden").hide("fast");
+									$("#fbkuname,#fbkemailid,#fbkmobile,#fbkquery").val("");
+									$("#success").removeClass("hidden").slideDown("slow");setTimeout("hideSuccess()",4000);
+								}
+								);
+	}  
+	
+	 
+}
+function hideSuccess()
+{
+	$("#success").hide("fast");
+}
+function isNumberKey(e) {
+    var key = e.keyCode ? e.keyCode : e.which;
+    if ( isNaN( String.fromCharCode(key) ) ) return false;
+}
+</script>
+</body></html>

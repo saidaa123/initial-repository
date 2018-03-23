@@ -1,0 +1,108 @@
+
+@media only screen and (max-width :980px) {
+#hero h1, .home-content h1 {
+	font-size: 38px
+}
+#hero h3, .home-content h1 small {
+	font-size: 16px
+}
+.navbar-inverse .navbar-nav>li>a {
+	border: none
+}
+}
+
+@media (max-width:767px) {
+.my_planTitle {
+	font-size: small
+}
+.my_feature {
+	text-align: center
+}
+.side-collapse-container {
+	width: 100%;
+	position: relative;
+	left: 0;
+	transition: left .4s
+}
+.side-collapse-container.out {
+	left: 220px
+}
+.side-collapse {
+	top: 50px;
+	bottom: 0;
+	left: 0;
+	width: 220px;
+	position: fixed;
+	overflow: hidden;
+	transition: width .4s
+}
+.side-collapse.in {
+	width: 0
+}
+.visible-vs {
+	display: none
+}
+}
+
+@media only screen and (max-width :640px) {
+#hero h1, .home-content h1 {
+	font-size: 28px
+}
+#hero h3, .home-content h1 small {
+	font-size: 14px
+}
+.carousel-control.left {
+	left: 0
+}
+.carousel-control.right {
+	right: 0
+}
+}
+
+@media only screen and (max-width :480px) {
+#hero h1, .home-content h1 {
+	font-size: 22px
+}
+#hero h3, .home-content h1 small {
+	font-size: 14px
+}
+.carousel-control.left {
+	left: 0
+}
+.carousel-control.right {
+	right: 0
+}
+.nav-button, .nav-button.lgn {
+	margin-right: 0
+}
+.visible-vs {
+	display: none
+}
+}
+
+@media only screen and (max-width :430px) {
+.navbar-header img {	
+	height: auto
+}
+.nav-button, .nav-button.lgn {
+	margin-right: 0
+}
+.hidden-vs {
+	display: block
+}
+.visible-vs {
+	display: none
+}
+}
+
+@media only screen and (max-width :480px) {
+.navbar-header img {	
+	height: auto
+}
+.hidden-vs {
+	display: none
+}
+.visible-vs {
+	display: block
+}
+}

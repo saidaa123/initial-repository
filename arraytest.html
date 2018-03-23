@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app="array">
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="js/angular.min.js"></script>
+<script>
+var mod=angular.module("array",[]);
+mod.controller("myctrl",function($scope)
+						{
+							$scope.subjects=["Eng","Maths"];							
+						}
+				);
+</script>
+</head>
+
+<body>
+<div ng-controller="myctrl">
+<select ng-model="subject" multiple size="3">
+<option value="English">English</option>
+<option value="Maths">Maths</option>
+<option value="Science">Science</option>
+</select>
+
+<p>Subjects: {{subjects|json}}</p>
+<p>Selected Subject: {{subject}}</p>
+</div>
+</body>
+</html>

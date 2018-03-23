@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="idaalearning">
+    <title>Tuition Room</title> 
+    <link rel="icon" href="img/favicon.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-ipad-retina.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-iphone-retina.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-ipad.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-iphone.png" />
+   <script type="text/javascript" src="js/jquery-latest.min.js"></script>
+   <script type="text/javascript">
+   var header,footer
+   $.ajax({"url":"header_ajax.html","async":false,"success":function(resp){header=resp}});
+   $.ajax({"url":"footer_ajax.html","async":false,"success":function(resp){footer=resp}});   
+   </script>
+<script type="text/javascript">document.writeln(header);</script>
+</head>          
+<body>
+<style>
+body { padding-top:50px;}
+.mh300 { min-height:300px;}
+</style>
+<div class="container">
+<div class="row">
+<div class="col-md-12 mh300">
+<h3>Pricing</h3>
+<p>Tuitionroom.com acts a intermediary between teachers and students. Every student will pay to teacher via tuitionroom.com which is <strong>SAFE, SECURE AND EASY</strong>.</p>
+<p>The pricing per session depends on how much the teacher charges for a single session. For example a senior mathematics teacher charges Rs.500/ per session which is for 1 hour and if the student is interested in taking a classroom from that teacher, he/she has to pay through tuitionroom.com payment gateway.</p>
+<p>In any case the teacher does not continue the class, tuitionroom.com will schedule the same session for another day or cancel the session and refund the amount within 30 days by deducting the tax as applicable.</p>
+<style>
+#rplcy { cursor:pointer;color:#03a9f4;}
+</style>
+<p> Please read our <span id="rplcy">refund policy </span>for further information.
+
+</p>
+</div>
+</div>
+</div>   
+<script type="text/javascript">document.writeln(footer);</script>	 
+<script>
+$("#rplcy").click(function() { window.location.href = "https://www.tuitionroom.com/termsnconditions.html?refundpolicy"});
+</script>
+</body>
+</html>
